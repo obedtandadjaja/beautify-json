@@ -7,6 +7,9 @@ Demo: https://htmlpreview.github.io/?https://github.com/obedtandadjaja/beautify-
 
 I have done quite a thorough test on it and it works perfectly so far, if you come across a JSON format that it does not "beautify" properly, please post it on the issues page.
 
+#### Coming Soon
+Collapsable array and object. STAY TUNED.
+
 #### Installation
 1. Clone this repository or download the file ```jquery.beautify-json.js```
 2. In your html file, make sure you have a script tag for ```jquery.min.js``` and ```jquery.beautify-json.js```
