@@ -24,14 +24,14 @@ Strict: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/strict.html
 ##### Flexible
 1. Handles incomplete/non-formatted JSON format (accepts JSON with a few missing brackets here and there)
 2. Done with nested divs, uls, and lis
-3. Collapsible
+3. Collapsible and hoverable
 4. No color coding for different types
 5. Demo: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/flexible.html
 
 ##### Strict
 1. Handles only perfectly formatted JSON, if not then show error
 2. Done with nested divs, uls, and lis
-3. Collapsible
+3. Collapsible and hoverable
 4. Color coding for different types
 5. Demo: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/strict.html
 
