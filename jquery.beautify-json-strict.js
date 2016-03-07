@@ -11,22 +11,32 @@
 
 	function iterateObject(object) {
 		$.each(object, function(index, element) {
-			if(element instanceof Array) {
-				text += "<li><div class='hoverable'>"+index+" : "+"[<span class='ellipsis'></span><span class='collapser'></span>";
+			if(element == null) {
+				text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-null'>"+element+"</span></div></li>";
+			} else if(element instanceof Array) {
+				text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: "+"[<span class='ellipsis'></span><span class='collapser'></span>";
 				text += "<ul class='array collapsible'>";
 				s_html.push("</li>");
 				s_html.push("</div>");
 				s_html.push("</ul>");
 				iterateArray(element);
 			} else if(typeof element == 'object') {
-				text += "<li><div class='hoverable'>"+index+" : "+"{<span class='ellipsis'></span><span class='collapser'></span>";
+				text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: "+"{<span class='ellipsis'></span><span class='collapser'></span>";
 				text += "<ul class='obj collapsible'>";
 				s_html.push("</li>");
 				s_html.push("</div>");
 				s_html.push("</ul>");
 				iterateObject(element);
 			} else {
-				text += "<li><div class='hoverable'>"+index+" : "+element+"</div></li>";
+				if(typeof element == "number") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-number'>"+element+"</span></div></li>";
+				} else if(typeof element == "string") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-string'>\""+element+"\"</span></div></li>";
+				} else if(typeof element == "boolean") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-boolean'>"+element+"</span></div></li>";
+				} else {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: "+element+"</div></li>";
+				}
 			}
 		});
 		text += s_html.pop()+"}"+s_html.pop()+s_html.pop();
@@ -34,7 +44,9 @@
 
 	function iterateArray(array) {
 		$.each(array, function(index, element) {
-			if(element instanceof Array) {
+			if(element == null) {
+				text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-null'>"+element+"</span></div></li>";
+			} else if(element instanceof Array) {
 				text += "<li><div class='hoverable'>[<span class='ellipsis'></span><span class='collapser'></span>";
 				text += "<ul class='array collapsible'>";
 				s_html.push("</li>");
@@ -49,7 +61,15 @@
 				s_html.push("</ul>");
 				iterateObject(element);
 			} else {
-				text += "<li><div class='hoverable'>"+index+" : "+element+"</div></li>";
+				if(typeof element == "number") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-number'>"+element+"</span></div></li>";
+				} else if(typeof element == "string") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-string'>\""+element+"\"</span></div></li>";
+				} else if(typeof element == "boolean") {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: <span class='type-boolean'>"+element+"</span></div></li>";
+				} else {
+					text += "<li><div class='hoverable'><span class='property'>"+index+"</span>: "+element+"</div></li>";
+				}
 			}
 		});
 		text += s_html.pop()+"]"+s_html.pop()+s_html.pop();
