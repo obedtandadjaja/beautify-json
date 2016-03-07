@@ -11,7 +11,6 @@
 
 	function iterateObject(object) {
 		$.each(object, function(index, element) {
-			console.log(index+" "+element);
 			if(element instanceof Array) {
 				text += "<li><div class='hoverable'>"+index+" : "+"[<span class='ellipsis'></span><span class='collapser'></span>";
 				text += "<ul class='array collapsible'>";
@@ -35,7 +34,6 @@
 
 	function iterateArray(array) {
 		$.each(array, function(index, element) {
-			console.log(index+" "+element);
 			if(element instanceof Array) {
 				text += "<li><div class='hoverable'>[<span class='ellipsis'></span><span class='collapser'></span>";
 				text += "<ul class='array collapsible'>";
@@ -61,10 +59,9 @@
 
     	this.each( function() {
 			var input = this.innerHTML;
-
 			var json = jQuery.parseJSON(input);
+			text = "";
 			text += "<div id='json'>";
-			this.innerHTML = text;
 			text += "<div class='hoverable'>{<span class='ellipsis'></span><span class='collapser'></span>";
 			text += "<ul class='obj collapsible'>";
 			s_html.push("");
@@ -89,7 +86,6 @@
 		    $('.collapser').click(function() {
 		    	$(this).parent('.hoverable').toggleClass('collapsed');
 		    });
-
     	});
     }
 

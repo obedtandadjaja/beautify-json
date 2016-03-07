@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="beautify-json.css">
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="jquery.beautify-json-flexible.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.one').beautifyJSON();
+            $('.two').beautifyJSON();
+		});
+	</script>
+</head>
+<body>
+	<div class="one">
+	{
+"problems": [{
+    "Diabetes":[{
+        "medications":[{
+            "medicationsClasses":[{
+                "className":[{
+                    "associatedDrug":[{
+                        "name":"asprin",
+                        "dose":"",
+                        "strength":"500 mg"
+                    }],
+                    "associatedDrug#2":[{
+                        "name":"somethingElse",
+                        "dose":"",
+                        "strength":"500 mg"
+                    }]
+                }],
+                "className2":[{
+                    "associatedDrug":[{
+                        "name":"asprin",
+                        "dose":"",
+                        "strength":"500 mg"
+                    }],
+                    "associatedDrug#2":[{
+                        "name":"somethingElse",
+                        "dose":"",
+                        "strength":"500 mg"
+                    }]
+                }]
+            }]
+        }],
+        "labs":[{
+            "missing_field": "missing_value"
+        }]
+    }],
+    "Asthma":[{}]
+}]}
+	</div>
+    <div class="two">
+        {"total":3,"per_page":20,"current_page":1,"last_page":1,"next_page_url":null,"prev_page_url":null,"from":1,"to":3,"data":[{"id":"0ecfe87f4e04425f87cf9336be50ed55","title":"Test","slug":"test","content":"Test 12356788<\/p>\n","created_at":"2016-02-06 05:36:48","updated_at":"2016-02-06 05:36:48","published_at":"2016-02-06 05:36:48","user_id":"7","proposal_id":null,"content_brief":"Test 12356788\n","is_published":true,"tagged":[]},{"id":"864b671611684f0091119d1d2a1071a3","title":"Testing Post","slug":"testing-post","content":"This is for testing purpose only. Please ignore!<\/p>\n\n\u00a0<\/p>\n\n\u00a0<\/p>\n","created_at":"2016-01-31 21:53:48","updated_at":"2016-01-31 21:53:48","published_at":"2016-01-31 21:53:48","user_id":"2","proposal_id":null,"content_brief":"This is for testing purpose only. Please ignore!\n\n\u00a0\n\n\u00a0\n","is_published":true,"tagged":[]},{"id":"feb01474019e44c3a0273058dba8f1ce","title":"First Post!","slug":"first-post","content":"Just wanted to try this out and post my first post! Welcome to Protege! More features are coming out soon!<\/p>\n","created_at":"2016-02-19 16:36:30","updated_at":"2016-02-19 16:36:55","published_at":"2016-02-19 16:36:55","user_id":"4","proposal_id":null,"content_brief":"Just wanted to try this out and post my first post! Welcome to Protege! More features are coming out soon!\n","is_published":true,"tagged":[]}]}
+    </div>
+</body>
+</html>
