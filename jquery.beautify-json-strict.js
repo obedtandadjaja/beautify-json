@@ -83,7 +83,7 @@
 		        $(this).addClass('hovered');
 		    });
 
-		    $('.collapser').click(function() {
+		    $('.collapser').off().click(function(event) {
 		    	$(this).parent('.hoverable').toggleClass('collapsed');
 		    });
     	});
