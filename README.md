@@ -3,12 +3,37 @@ jquery plugin to make JSON more human-readable
 
 A simple, light-weight jquery plugin that makes your JSON messages easier to read.
 
-Demo: https://htmlpreview.github.io/?https://github.com/obedtandadjaja/beautify-json/blob/master/index.html
-
 I have done quite a thorough test on it and it works perfectly so far, if you come across a JSON format that it does not "beautify" properly, please post it on the issues page.
 
-#### Coming Soon
-Collapsable array and object. STAY TUNED.
+#### Demos
+Plain: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/plain.html
+
+Flexible: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/flexible.html
+
+Strict: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/strict.html
+
+#### Versions
+##### Plain
+1. Handles incomplete/non-formatted JSON format (accepts JSON with a few missing brackets here and there)
+2. Done all in the paragraph tag using whitespaces and breaks
+3. Non-collapsible
+4. No color coding
+5. Very lightweight
+6. Demo: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/plain.html
+
+##### Flexible
+1. Handles incomplete/non-formatted JSON format (accepts JSON with a few missing brackets here and there)
+2. Done with nested divs, uls, and lis
+3. Collapsible
+4. No color coding for different types
+5. Demo: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/flexible.html
+
+##### Strict
+1. Handles only perfectly formatted JSON, if not then show error
+2. Done with nested divs, uls, and lis
+3. Collapsible
+4. Color coding for different types
+5. Demo: https://cdn.rawgit.com/obedtandadjaja/beautify-json/master/strict.html
 
 #### Installation
 1. Clone this repository or download the file ```jquery.beautify-json.js```
