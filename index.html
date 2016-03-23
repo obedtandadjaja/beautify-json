@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="beautify-json.css">
+	<link rel="stylesheet" type="text/css" href="beautify-json.css">
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="jquery.beautify-json-flexible.js"></script>
+	<script src="jquery.beautify-json-strict.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('.one').beautifyJSON();
+			$('.one').beautifyJSON({
+                type: "plain"
+            });
             $('.two').beautifyJSON();
 		});
 	</script>
