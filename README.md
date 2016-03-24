@@ -6,8 +6,16 @@ A simple, light-weight jquery plugin that makes your JSON messages easier to rea
 I have done quite a thorough test on it and it works perfectly so far, if you come across a JSON format that it does not "beautify" properly, please post it on the issues page.
 
 #### Screenshots
+##### Strict:
+
 ![Strict](https://github.com/obedtandadjaja/beautify-json/blob/master/strict.png "Type: Strict")
+
+##### Flexible:
+
 ![Flexible](https://github.com/obedtandadjaja/beautify-json/blob/master/flexible.png "Type: Flexible")
+
+##### Plain:
+
 ![Plain](https://github.com/obedtandadjaja/beautify-json/blob/master/plain.png "Type: Plain")
 
 #### Live Demo
