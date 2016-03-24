@@ -7,7 +7,6 @@
     		color: true
     	};
   		var settings = jQuery.extend({}, defaults, options);
-  		console.log(settings);
     	this.each( function() {
     		if(settings.type == "plain") {
 				var INCREMENT = "&ensp;&ensp;&ensp;";
@@ -18,6 +17,11 @@
 				   return i%2 ? v : v.replace(/\s/g, "");
 				}).join('"');
 				var text = "";
+				function peek(stack) {
+					var val = stack.pop();
+					stack.push(val);
+					return val;
+				}
 				for(i = 0; i < input.length; i++) {
 					if(input.charAt(i) == '{') {
 						s.push(input.charAt(i));
@@ -79,6 +83,11 @@
 				}
 				text += "<div id='json'>";
 				s_html.push("</div>");
+				function peek(stack) {
+					var val = stack.pop();
+					stack.push(val);
+					return val;
+				}
 				for(i = 0; i < input.length; i++) {
 					if(input.charAt(i) == '{') {
 						s.push(input.charAt(i));
@@ -220,7 +229,6 @@
 				s_html.push("");
 				s_html.push("</div>");
 				s_html.push("</ul>")
-				console.log(json);
 				iterateObject(json);
 				text += "</ul></div></div>";
 				this.innerHTML = text;
